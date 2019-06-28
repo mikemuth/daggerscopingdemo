@@ -8,7 +8,6 @@ import javax.inject.Singleton
 @Module
 class FeatureModule {
     @Provides
-    @Singleton
     fun provideMainActivityPresenter() : FeatureActivityPresenter
     {
         return FeatureActivityPresenter()

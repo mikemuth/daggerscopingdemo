@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -33,12 +34,14 @@ dependencies {
     /* Dagger2 - We are going to use dagger.android which includes
    * support for Activity and fragment injection so we need to include
    * the following dependencies */
-    implementation 'com.google.dagger:dagger-android:2.17'
-    implementation 'com.google.dagger:dagger-android-support:2.17'
-    annotationProcessor 'com.google.dagger:dagger-android-processor:2.17'
 
     /* Dagger2 - default dependency */
     annotationProcessor 'com.google.dagger:dagger-compiler:2.17'
+    implementation "com.google.dagger:dagger:2.17"
+    implementation "com.google.dagger:dagger-android:2.17"
+    implementation "com.google.dagger:dagger-android-support:2.17"
+    kapt "com.google.dagger:dagger-compiler:2.17"
+    kapt "com.google.dagger:dagger-android-processor:2.17"
 
     /* Add Kotlin support */
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.71'

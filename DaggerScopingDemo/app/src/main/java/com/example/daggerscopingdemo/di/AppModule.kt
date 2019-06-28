@@ -1,4 +1,4 @@
-package com.example.daggerscopingdemo.dagger
+package com.example.daggerscopingdemo.di
 
 import com.example.daggerscopingdemo.services.MainActivityPresenter
 import dagger.Module
@@ -9,7 +9,6 @@ import javax.inject.Singleton
 class AppModule
 {
     @Provides
-    @Singleton
     fun provideMainActivityPresenter() : MainActivityPresenter
     {
         return MainActivityPresenter()
