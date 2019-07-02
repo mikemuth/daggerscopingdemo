@@ -1,26 +1,24 @@
 package com.example.daggerscopingdemo.di
 
-import com.example.daggerscopingdemo.MainActivity
 import dagger.Component
-import dagger.android.AndroidInjectionModule
-import javax.inject.Singleton
-import android.app.Application
 import com.example.daggerscopingdemo.DaggerScopingDemoApplication
-import dagger.BindsInstance
+import com.example.daggerscopingdemo.MainActivity
 import dagger.android.AndroidInjector
+import com.example.feature.FeatureActivity
+import com.example.feature.di.FeatureModule
+import dagger.android.support.AndroidSupportInjectionModule
 
 @Component(modules = [
-    AndroidInjectionModule::class,
-    AppModule::class,
-    ActivityBuilder::class])
-interface AppComponent : AndroidInjector<DaggerScopingDemoApplication> {
+        AndroidSupportInjectionModule::class,
+        AppModule::class,
+        FeatureModule::class
+//        ContributeActivityModule::class
+    ])
+interface AppComponent : AndroidInjector<DaggerScopingDemoApplication> { // 3
     @Component.Builder
-    interface Builder {
+    abstract class Builder : AndroidInjector.Builder<DaggerScopingDemoApplication>() // 4
 
-        @BindsInstance
-        fun application(application: Application): Builder
+    fun inject(mainActivity: MainActivity)
+    fun inject(featureActivity: FeatureActivity)
 
-        fun build(): AppComponent
-    }
-    var mainActivity: MainActivity
 }

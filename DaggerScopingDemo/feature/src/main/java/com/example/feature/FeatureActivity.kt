@@ -3,11 +3,12 @@ package com.example.feature
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity;
+import dagger.android.support.DaggerAppCompatActivity
 
 import kotlinx.android.synthetic.main.activity_feature.*
 import javax.inject.Inject
 
-class FeatureActivity : AppCompatActivity() {
+class FeatureActivity : DaggerAppCompatActivity() {
     @Inject
     lateinit var featureActivityPresenter : FeatureActivityPresenter
 
