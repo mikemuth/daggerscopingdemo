@@ -10,15 +10,9 @@ import dagger.android.support.AndroidSupportInjectionModule
 
 @Component(modules = [
         AndroidSupportInjectionModule::class,
-        AppModule::class,
-        FeatureModule::class
-//        ContributeActivityModule::class
+        ContributeActivityModule::class
     ])
 interface AppComponent : AndroidInjector<DaggerScopingDemoApplication> { // 3
     @Component.Builder
     abstract class Builder : AndroidInjector.Builder<DaggerScopingDemoApplication>() // 4
-
-    fun inject(mainActivity: MainActivity)
-    fun inject(featureActivity: FeatureActivity)
-
 }

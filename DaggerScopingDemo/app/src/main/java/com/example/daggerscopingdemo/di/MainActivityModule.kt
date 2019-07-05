@@ -8,5 +8,5 @@ import com.example.feature.di.FeatureModule
 @Module
 abstract class MainActivityModule {
     @ContributesAndroidInjector(modules = [FeatureModule::class, AppModule::class])
-    abstract fun contributeMainActivityInjector(): MainActivity
+    abstract fun contributeMainActivity(): MainActivity
 }
