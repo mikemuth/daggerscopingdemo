@@ -9,6 +9,7 @@ import javax.inject.Singleton
 class AppModule
 {
     @Provides
+    @Singleton
     fun provideMainActivityPresenter() : MainActivityPresenter
     {
         return MainActivityPresenter()
