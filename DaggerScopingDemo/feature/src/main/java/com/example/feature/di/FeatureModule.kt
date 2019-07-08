@@ -8,7 +8,6 @@ import javax.inject.Scope
 @Module
 class FeatureModule {
     @Provides
-    @FeatureScope
     fun provideFeatureActivityPresenter() : FeatureActivityPresenter
     {
         return FeatureActivityPresenter()

@@ -9,7 +9,6 @@ import javax.inject.Singleton
 
 @Module
 abstract class MainActivityModule {
-    @ContributesAndroidInjector(modules = [FeatureModule::class, AppModule::class])
-    @FeatureScope
+    @ContributesAndroidInjector(modules = [AppModule::class])
     abstract fun contributeMainActivity(): MainActivity
 }

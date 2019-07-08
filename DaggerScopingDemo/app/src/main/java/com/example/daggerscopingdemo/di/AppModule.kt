@@ -10,7 +10,6 @@ import javax.inject.Singleton
 class AppModule
 {
     @Provides
-    @FeatureScope
     fun provideMainActivityPresenter() : MainActivityPresenter
     {
         return MainActivityPresenter()
