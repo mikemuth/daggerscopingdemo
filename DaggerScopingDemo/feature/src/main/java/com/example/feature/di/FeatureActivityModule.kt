@@ -9,6 +9,6 @@ import javax.inject.Singleton
 @Module
 abstract class FeatureActivityModule {
     @ContributesAndroidInjector(modules = [FeatureModule::class])
-    @Singleton
+    @FeatureScope
     abstract fun contributeFeatureActivity(): FeatureActivity
 }

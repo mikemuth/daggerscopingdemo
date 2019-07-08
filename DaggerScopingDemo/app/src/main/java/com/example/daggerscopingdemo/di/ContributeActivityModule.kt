@@ -7,5 +7,4 @@ import dagger.Module
     MainActivityModule::class,
     FeatureActivityModule::class
 ])
-abstract class ContributeActivityModule {
-}
+abstract class ContributeActivityModule { }
