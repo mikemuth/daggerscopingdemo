@@ -7,7 +7,7 @@ trigger:
 - azure_pipelines
 
 pool:
-  vmImage: 'macos-latest'
+  vmImage: 'vs2017-win2016'
 
 steps:
 - task: Gradle@2
