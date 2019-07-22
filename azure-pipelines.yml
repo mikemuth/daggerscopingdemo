@@ -16,7 +16,7 @@ steps:
   inputs:
     apkFiles: '**/*.apk' 
     apksign: true # Optional
-    apksignerKeystoreFile: android-sdk-license # Required when apksign == True
+    apksignerKeystoreFile: android-sdk-license.apk # Required when apksign == True
     #apksignerKeystorePassword: # Optional
     #apksignerKeystoreAlias: # Optional
     #apksignerKeyPassword: # Optional
